@@ -1,0 +1,80 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNGNHL4kVjZBIRRMbxsCYo0",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/julia-kheil/algoritma/blob/main/gunting%20kertas%20batu%20github\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import random\n",
+        "\n",
+        "user_action = input(\"Enter a choice (rock, paper, scissors): \")\n",
+        "possible_actions = [\"rock\", \"paper\", \"scissors\"]\n",
+        "computer_action = random.choice(possible_actions)\n",
+        "print(f\"\\nYou chose {user_action}, computer chose {computer_action}.\\n\")\n",
+        "\n",
+        "if user_action == computer_action:\n",
+        "    print(f\"Both players selected {user_action}. It's a tie!\")\n",
+        "elif user_action == \"rock\":\n",
+        "    if computer_action == \"scissors\":\n",
+        "        print(\"Rock smashes scissors! You win!\")\n",
+        "    else:\n",
+        "        print(\"Paper covers rock! You lose.\")\n",
+        "elif user_action == \"paper\":\n",
+        "    if computer_action == \"rock\":\n",
+        "        print(\"Paper covers rock! You win!\")\n",
+        "    else:\n",
+        "        print(\"Scissors cuts paper! You lose.\")\n",
+        "elif user_action == \"scissors\":\n",
+        "    if computer_action == \"paper\":\n",
+        "        print(\"Scissors cuts paper! You win!\")\n",
+        "    else:\n",
+        "        print(\"Rock smashes scissors! You lose.\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "g6W9Cl2NxHYu",
+        "outputId": "db10d49d-89d3-4857-e27f-24bac63ba5c8"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a choice (rock, paper, scissors): paper\n",
+            "\n",
+            "You chose paper, computer chose rock.\n",
+            "\n",
+            "Paper covers rock! You win!\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
